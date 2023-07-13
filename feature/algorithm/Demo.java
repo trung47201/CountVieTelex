@@ -3,12 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Demo {
-	private static final List<String> listOne = Arrays.asList("aw", "aa", "dd", "ee", "oo", "ow", "w");
+	private static final List<String> listTelex = Arrays.asList("aw", "aa", "dd", "ee", "oo", "ow", "w");
 
 	public static int countVieLettersTelex(String strs) {
 		int count = 0;
 		String newStrs = strs.replaceAll("\\s+", "");
-		for (String it : listOne) {
+		for (String it : listTelex) {
 			while (!newStrs.replaceFirst(it, "").equals(newStrs)) {
 				newStrs = newStrs.replaceFirst(it, "");
 				count++;
